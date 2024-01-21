@@ -1,0 +1,37 @@
+.border{
+    margin: 30px;
+}
+.container{
+    /* must include the display: flex for using flexbox */
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.items{
+    background-color: chartreuse;
+    padding: 10px;
+    margin: 10px;
+}
+.grid-footer-parent{
+    display: grid;
+    background-color: rgb(255, 255, 255);
+    grid-template-columns: repeat(6, 1fr);
+}
+.grid-footer-child{
+    background-color: brown;
+    border: 3px  solid rgb(251, 255, 0);
+    text-align: center;
+    color: aqua;
+}
+@media ( min-width: 800px ){
+    .grid-footer-parent{
+        grid-template-columns: repeat(6,1fr);
+    }
+}
+@media ( max-width: 700px ){
+    .grid-footer-parent{
+        grid-template-columns: repeat(5,1fr);
+    }
+}
